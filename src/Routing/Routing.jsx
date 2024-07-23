@@ -6,8 +6,8 @@ export default function Routing() {
   return (
     <BrowserRouter>
      <Routes>
-        <Route path='/' element={<Login/>}></Route>
-        <Route path='/dashboard' element={<Dashboard/>}></Route>
+        <Route path='/login' element={<Login/>}></Route>
+        <Route path='/' element={<Dashboard/>}></Route>
      </Routes>
     </BrowserRouter>
   )
