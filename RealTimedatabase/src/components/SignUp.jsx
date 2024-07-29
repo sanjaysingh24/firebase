@@ -1,6 +1,9 @@
 import React from 'react'
-import { useState } from 'react'
+import { useState,useContext } from 'react'
+import { StoreProvider } from '../Provider/Store'
 const SignUp = () => {
+const{createuser} = useContext(StoreProvider);
+
     const[data,setdata] = useState({
         email:'',
         password:''
@@ -16,7 +19,8 @@ const SignUp = () => {
 
 const handlesignup = (e)=>{
     e.preventDefault();
-    
+    createuser(data);
+
 }
   return (
      <section>
